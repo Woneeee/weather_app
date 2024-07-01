@@ -8,7 +8,7 @@ cmd 아니면 git bash에서
 2. git config --global user.name "Woneeee"
    =>내가 누군지 알려주기
 
-3. git config ==global user.emil "a6885088@naver.com"
+3. git config ==global user.email "a6885088@naver.com"
    =>내가 누군지 알려주기2
 
 4. git config --list

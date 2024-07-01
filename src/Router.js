@@ -1,15 +1,15 @@
-const { HashRouter, Routes, Route } = require("react-router-dom")
+const { HashRouter, Routes, Route } = require("react-router-dom");
 
 const Router = () => {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={""} />
-        <Route path="/login" element={""} />
-        <Route path="/signup" element={""} />
-        <Route path="/*" element={""} />
+        <Route path="/" />
+        <Route path="/login" />
+        <Route path="/signup" />
+        <Route path="/*" />
       </Routes>
-    </HashRouter>>
+    </HashRouter>
   );
 };
 
