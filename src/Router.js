@@ -1,12 +1,19 @@
-const App = () => {
+const { HashRouter, Routes, Route } = require("react-router-dom")
+
+const Router = () => {
   return (
-    <>
-      <h1>App</h1>
-    </>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={""} />
+        <Route path="/login" element={""} />
+        <Route path="/signup" element={""} />
+        <Route path="/*" element={""} />
+      </Routes>
+    </HashRouter>>
   );
 };
 
-export default App;
+export default Router;
 
 // *git
 // =>파일의 변경, 추가, 삭제등 파일이 기존내용에서
