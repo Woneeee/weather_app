@@ -33,17 +33,17 @@ cmd 아니면 git bash에서
 
 ### 설치할 라이브러리
 
-- [ ] react-router-dom
+- [x] react-router-dom
 - [ ] styled-components
 - [ ] styled-reset
-- [ ] axios
-- [ ] tan-stack-query
+- [x] axios
+- [x] tan-stack-query
 - [ ] react-helmet
 
 ### 작업 내용
 
-- [ ] 라우터 설정
-- [ ] 각 페이지 컴포넌트 구성
+- [x] 라우터 설정
+- [x] 각 페이지 컴포넌트 구성
 - [ ] api 설정
 - [ ] 데이터 받아오기
 - [ ] 스타일
