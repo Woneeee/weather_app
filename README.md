@@ -34,10 +34,10 @@ cmd 아니면 git bash에서
 ### 설치할 라이브러리
 
 - [x] react-router-dom
-- [ ] styled-components
-- [ ] styled-reset
 - [x] axios
 - [x] tan-stack-query
+- [ ] styled-components
+- [ ] styled-reset
 - [ ] react-helmet
 
 ### 작업 내용
