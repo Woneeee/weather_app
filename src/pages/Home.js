@@ -20,7 +20,7 @@ const Container = styled.div`
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 40px;
 `;
 
 const Menu = styled.div`
@@ -42,10 +42,11 @@ const More = styled.div`
 
 const Section = styled.section`
   margin-top: 50%;
-  padding: 0 20px;
+  padding: 0 40px;
 
   h3 {
     font-size: 46px;
+    font-weight: 200;
   }
 `;
 
@@ -79,7 +80,7 @@ const Temp = styled.div`
 const Num = styled.div`
   font-size: 34px;
   font-weight: 300;
-  padding: 20px 0;
+  padding: 15px 0;
   &:nth-child(2) {
     border-top: 1px solid #eee;
   }
@@ -127,7 +128,7 @@ export const Home = () => {
 
             <Num>
               {data?.main?.temp_min}
-              <span>º</span>c
+              <span>°</span>c
             </Num>
           </Temp>
         </TempWrap>
