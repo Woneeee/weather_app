@@ -3,6 +3,8 @@ import { getWeather } from "../api";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faPlus } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
+import { useCurrentPos } from "../lib/useCurrentPos";
+import { Loading } from "../components/Loading";
 
 const Container = styled.div`
   max-width: 450px;
@@ -17,7 +19,7 @@ const Container = styled.div`
   /* css gradient 구글에 쳐서 코드 복사 */
 `;
 
-const Header = styled.header`
+const SHeader = styled.header`
   display: flex;
   justify-content: space-between;
   padding: 40px;
@@ -87,52 +89,67 @@ const Num = styled.div`
 `;
 
 export const Home = () => {
+  const { lat, lon } = useCurrentPos();
   const { data, isLoading } = useQuery({
-    queryKey: ["weather"],
+    queryKey: ["weather", lat, lon],
     queryFn: getWeather,
   });
 
+  // console.log(lat, lon);
+
   console.log(data);
 
+  console.log(isLoading);
+
   return (
-    <Container>
-      <Header>
-        <Menu>
-          <FontAwesomeIcon icon={faBars} />
-        </Menu>
+    <>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <>
+          {data && (
+            <Container>
+              <SHeader>
+                <Menu>
+                  <FontAwesomeIcon icon={faBars} />
+                </Menu>
 
-        <MyLocation>
-          <h3>{data?.name}</h3>
-          <p>Sat, 19:30 pm</p>
-        </MyLocation>
+                <MyLocation>
+                  <h3>{data.name}</h3>
+                  <p>Sat, 19:30 pm</p>
+                </MyLocation>
 
-        <More>
-          <FontAwesomeIcon icon={faPlus} />
-        </More>
-      </Header>
+                <More>
+                  <FontAwesomeIcon icon={faPlus} />
+                </More>
+              </SHeader>
 
-      <Section>
-        <h3>{data?.weather?.[0].main}</h3>
+              <Section>
+                <h3>{data.weather[0].main}</h3>
 
-        <TempWrap>
-          <Temp className="temp">
-            {data?.main?.temp}
-            <span>°</span>
-          </Temp>
+                <TempWrap>
+                  <Temp className="temp">
+                    {Math.round(data.main.temp)}
+                    <span>°</span>
+                  </Temp>
 
-          <Temp>
-            <Num>
-              {data?.main?.temp_max}
-              <span>°</span>c
-            </Num>
+                  <Temp>
+                    <Num>
+                      {Math.round(data.main.temp_max)}
+                      <span>°</span>c
+                    </Num>
 
-            <Num>
-              {data?.main?.temp_min}
-              <span>°</span>c
-            </Num>
-          </Temp>
-        </TempWrap>
-      </Section>
-    </Container>
+                    <Num>
+                      {Math.round(data.main.temp_min)}
+                      <span>°</span>c
+                    </Num>
+                  </Temp>
+                </TempWrap>
+              </Section>
+            </Container>
+          )}
+        </>
+      )}
+    </>
   );
 };
