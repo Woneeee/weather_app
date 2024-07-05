@@ -38,7 +38,7 @@ cmd 아니면 git bash에서
 - [x] tan-stack-query
 - [x] styled-components
 - [x] styled-reset
-- [ ] react-helmet
+- [x] react-helmet-async
 
 ### 작업 내용
 
@@ -49,10 +49,8 @@ cmd 아니면 git bash에서
 - [x] 스타일
 - [x] 현재 위치 얻어오기
 - [x] 현재 위치에 맞는 날씨 정보 요청
-- [ ] 타이틀 설정
-- [ ] 코드 리팩토링
-
-- [ ] 404 UI
+- [x] 타이틀 설정
+- [x] 코드 리팩토링
 
 ### 레퍼런스
 
