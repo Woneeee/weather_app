@@ -8,13 +8,13 @@ cmd 아니면 git bash에서
 2. git config --global user.name "Woneeee"
    =>내가 누군지 알려주기
 
-3. git config ==global user.email "a6885088@naver.com"
+3. git config --global user.email "a6885088@naver.com"
    =>내가 누군지 알려주기2
 
 4. git config --list
    =>리스트로 아이디, 이메일 등록되었는지 확인 (list 본 후에 q로 빠져나가기)
 
-5. git remote add arigin 저장소url
+5. git remote add origin 저장소url
    =>저장소 추가
 
 6. git add .
@@ -62,6 +62,7 @@ https://uxplanet.org/sky-inspired-weather-app-concept-4f1775ce4571
 <li> npm i gh-pages 설치
 <li> package.json 코드 작성
 <li> 홈페이지 주소 형식: 아이디.github.io/저장소명/
+<li> 다시 커밋, 푸시
 <li> npm run deploy (배포 완료시 published! 라고 뜸)
 <li> 깃허브 사이트에서 settings -> pages -> branch 설정 변경 (pages로 바꿈)
 <li> 저장소 페이지에서 우측 중간에 Deployments 클릭

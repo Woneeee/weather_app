@@ -13,7 +13,6 @@ const SSection = styled.section`
 const TempWrap = styled.div`
   display: flex;
   justify-content: space-between;
-
   .temp {
     font-size: 180px;
     font-weight: 200;
